@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Корень из числа</title>
+</head>
+<body>
+<h1>Вычисление квадратного корня</h1>
+
+<p id="result">Результат</p>
+
+<script>
+  const input = prompt("Введите число, из которого нужно извлечь корень:");
+
+  const x = parseFloat(input);
+
+  const resultElement = document.getElementById("result");
+
+  if (!isNaN(x)) {
+    const sqrt = Math.sqrt(x);
+    resultElement.textContent = `Квадратный корень из ${x} = ${sqrt}`;
+  } else {
+    resultElement.textContent = "Ошибка: введено не число.";
+  }
+</script>
+</body>
+</html>
